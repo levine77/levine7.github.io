@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[On One Side Kolmogorov Type Inequalities]]></title>
+      <url>http://levine77.github.io/2016/02/26/MathJax-With-Hexo/</url>
+      <content type="html"><![CDATA[<h1 id="On_One_Side_Kolmogorov_Type_Inequalities"><a href="#On_One_Side_Kolmogorov_Type_Inequalities" class="headerlink" title="On One Side Kolmogorov Type Inequalities"></a>On One Side Kolmogorov Type Inequalities</h1><p>Let $X_1,X_2,\ldots,X_n$ be independent random variables. Denote</p>
+
+$${ S_n=\sum_{i=1}^n X_i. }$$
+
+<p>The  well known <em>Kolmogrov inequality</em> can be stated as for all $\varepsilon&gt; 0$, </p>
+
+$$P\left(\max_{1\le j\le n}|S_j|\ge \varepsilon\right)\le\frac{Var(S_n)}{\varepsilon^2}.$$
+
+<p><em>The one side kolmogrov type ineqalites</em> are stated as for all $\varepsilon&gt;0$,</p>
+
+$$ P\left(\max_{1\le j\le n}S_j\ge \varepsilon\right)\le\frac{Var(S_n)}{\varepsilon^2+Var(S_n)}.$$
+
+<p>We will prove this inequality in the following.</p>
+<p><strong>Proposition.</strong>  Let $X$ be a random variable with $Var(X)&lt;\infty$. Then for all $\varepsilon&gt;0$,</p>
+
+ \[P(X\ge \varepsilon)\le\frac{Var(X)}{\varepsilon^2+Var(X)}.\]
+
+<p><strong>Proof.</strong> Without loss of generality, we may assume that $E(X)=0$. Then </p>
+
+$$\varepsilon=E(\varepsilon - X) = E \{ (\varepsilon - X) I_{ \{ X < \varepsilon \} } \} + E\{(\varepsilon - X) I_{\{X\ge \varepsilon\}}\}
+\le E\{(\varepsilon - X)I_{\{X< \varepsilon\}} \}.$$
+
+<p>By Cauchy-Schwardz’s inequality, We have</p>
+
+$$\varepsilon^2 \le \left[ E \{ ( \varepsilon - X) I_{ \{ X < \varepsilon \} } \} \right]^2 \le E(\varepsilon  + X)^2 P ( X < \varepsilon ) = [ \varepsilon^2 + Var(X) ] [1 - P ( \ge \varepsilon ) ].$$
+
+<p>Therefor,</p>
+
+$$P(X\ge \varepsilon)\le\frac{Var(X)}{\varepsilon^2+Var(X)}.$$
+
+<p><strong>Proof of the one side Kolmogorov type inequality.</strong> Let 
+$$\lambda = \{ \max_{ 1 \le j \le n} S_j \ge \varepsilon \} \mbox{ and } \lambda_k = \{ \max_{ 1 \le j < k} S_j < \varepsilon, S_k \ge \varepsilon \}$$
+<br>then $\lambda = \bigcup_{k=1}^{n} \lambda_k$. Without loss of generality, we assume that $E ( X_j ) = 0,j=1,\ldots,n.$ Then by the independence of the random variables,</p>
+
+$$\begin{array}{rcl}\varepsilon&=&E[\varepsilon -S_n]=E[(\varepsilon-S_n)I_{\Lambda}]+[(\varepsilon-S_n)I_{\Lambda}^c]\\ &=&\sum_{k=1}^n[(\varepsilon-S_n)I_{\Lambda_k}]+[(\varepsilon-S_n)I_{\Lambda^c}]\\ &=&\sum_{k=1}^n E[\{(\varepsilon-S_k) -(S_n-S_k)\}I_{\Lambda_k}]+[(\varepsilon-S_n)I_{\Lambda^c}]\\ &=&\sum_{k=1}^n E[(\varepsilon-S_k)I_{\Lambda_k}]+\sum_{k=1}^n[E(S_n-S_k)I_{\Lambda_k}]+E[(\varepsilon-S_n)I_{\Lambda^c}]\\ &=&\sum_{k=1}^n E[(\varepsilon-S_k)I_{\Lambda_k}]+E[(\varepsilon-S_n)I_{\Lambda^c}]\\ &\le&E[(\varepsilon-S_n)I_{\Lambda^c}].\end{array}$$
+
+<p>By Cauchy-Schwardz’s inequality, we have</p>
+
+$$\varepsilon^2\le \{E[(\varepsilon-S_n)I_{\Lambda^c}]\}^2\le E[(\varepsilon-S_n)]^2 P(I_{\Lambda^c})=[\varepsilon^2+Var(S_n^2)][1-P(\Lambda)].$$
+
+<p>Therefore,</p>
+
+$$P\left(\max_{1\le j\le n}S_j\ge \varepsilon\right)\le\frac{Var(S_n)}{\varepsilon^2+Var(S_n)}$$
+
+<p>as the inequality claimed.</p>
+<p>Remark. The one side Kolmogorov type inequality is also true for martingale difference sequence as well as demimartingales, the proof is samilar.  </p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
